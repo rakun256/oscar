@@ -27,13 +27,11 @@ export function AuthProvider({ children }) {
     return unsub;
   }, []);
 
-  const navigate = useNavigate();
   const logout = async () => {
     try {
       await signOut(auth);
       notify.success("Başarıyla çıkış yapıldı");
       console.log("Çıkış başarılı");
-      navigate("/");
     } catch (e) {
       notify.error("Çıkış yapılırken bir hata oluştu");
       console.error("Hata:", e);
