@@ -5,6 +5,7 @@ import ProtectedRoute from "./components/ProtectedRoute.jsx";
 import ComponentTest from "./pages/Test/ComponentTest.jsx";
 import WelcomePage from "./pages/Auth/Welcome.jsx";
 import Login from "./pages/Auth/Login.jsx";
+import Register from "./pages/Auth/Register.jsx";
 
 function App() {
   return (
@@ -15,8 +16,9 @@ function App() {
             <Routes>
               {/* Public Routes */}
               <Route path="/test" element={<ComponentTest />} />
-              <Route path="/welcome" element={<WelcomePage />} />
+              <Route path="/" element={<WelcomePage />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register />} />
               {/* Protected Routes */}
               <Route element={<ProtectedRoute />}></Route>
             </Routes>
