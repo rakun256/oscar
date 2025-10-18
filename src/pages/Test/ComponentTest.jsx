@@ -1,5 +1,8 @@
+import { FaUser } from "react-icons/fa6";
 import Button from "../../components/Button";
+import Input from "../../components/Input";
 import { useUI } from "../../context/UIContext";
+import { FaEnvelope } from "react-icons/fa6";
 
 export default function ComponentTest() {
   const { notify } = useUI();
@@ -25,6 +28,9 @@ export default function ComponentTest() {
         <Button disabled variant="primary">
           Disabled Button
         </Button>
+        <Input type="text" placeholder="Enter text" icon={FaUser} />
+        <Input type="password" placeholder="Enter password" />
+        <Input type="email" placeholder="Enter email" icon={FaEnvelope} />
       </div>
     </div>
   );
