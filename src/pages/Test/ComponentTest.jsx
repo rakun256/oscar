@@ -3,6 +3,7 @@ import Button from "../../components/Button";
 import Input from "../../components/Input";
 import { useUI } from "../../context/UIContext";
 import { FaEnvelope } from "react-icons/fa6";
+import Navbar from "../../components/Navbar";
 
 export default function ComponentTest() {
   const { notify } = useUI();
@@ -13,6 +14,7 @@ export default function ComponentTest() {
 
   return (
     <div className="flex flex-col w-[100] min-h-[100vh] items-center justify-center">
+      <Navbar />
       <h1 className="text-text font-bold text-2xl ">Component Test Page</h1>
       <div className="flex flex-col gap-3 p-6">
         <Button onClick={handleClick}>Primary Button</Button>
