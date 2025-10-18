@@ -24,7 +24,7 @@ export default function WelcomePage() {
       <div className="flex flex-col gap-4 w-full max-w-xs">
         <Button
           variant="outline_primary"
-          onClick={() => navigate("/auth/login")}
+          onClick={() => navigate("/login")}
           className="w-full"
         >
           Giriş Yap
@@ -32,7 +32,7 @@ export default function WelcomePage() {
 
         <Button
           variant="secondary"
-          onClick={() => navigate("/auth/register")}
+          onClick={() => navigate("/register")}
           className="w-full"
         >
           Kayıt Ol
