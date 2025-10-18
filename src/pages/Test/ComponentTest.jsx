@@ -4,6 +4,7 @@ import Input from "../../components/Input";
 import { useUI } from "../../context/UIContext";
 import { FaEnvelope } from "react-icons/fa6";
 import Navbar from "../../components/Navbar";
+import TaskCard from "../../components/TaskCard";
 
 export default function ComponentTest() {
   const { notify } = useUI();
@@ -33,6 +34,17 @@ export default function ComponentTest() {
         <Input type="text" placeholder="Enter text" icon={FaUser} />
         <Input type="password" placeholder="Enter password" />
         <Input type="email" placeholder="Enter email" icon={FaEnvelope} />
+        <TaskCard
+          task={{ title: "Sample Task", description: "This is a sample task." }}
+        />
+        <TaskCard
+          task={{
+            title: "Sample Task 2",
+            description: "This is another sample task.",
+            completedToday: true,
+            completedBy: "User 1",
+          }}
+        />
       </div>
     </div>
   );

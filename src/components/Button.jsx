@@ -14,9 +14,9 @@ export default function Button({
     secondary:
       "border-secondary text-secondary hover:bg-secondary hover:text-bg",
     outline_primary:
-      "border-primary text-bg hover:bg-bg hover:text-primary bg-primary",
+      "border-primary text-bg hover:bg-accent hover:text-primary bg-primary",
     outline_secondary:
-      "border-secondary text-bg hover:bg-bg hover:text-secondary bg-secondary",
+      "border-secondary text-bg hover:bg-accent hover:text-secondary bg-secondary",
   };
 
   return (
