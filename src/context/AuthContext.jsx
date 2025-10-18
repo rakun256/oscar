@@ -2,7 +2,6 @@ import { createContext, useContext, useEffect, useState, useMemo } from "react";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../lib/firebase";
 import { useUI } from "./UIContext";
-import { useNavigate } from "react-router-dom";
 
 const AuthContext = createContext();
 

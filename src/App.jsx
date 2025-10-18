@@ -3,6 +3,7 @@ import { UIProvider } from "./context/UIContext.jsx";
 import { AuthProvider } from "./context/AuthContext.jsx";
 import ProtectedRoute from "./components/ProtectedRoute.jsx";
 import ComponentTest from "./pages/Test/ComponentTest.jsx";
+import WelcomePage from "./pages/Auth/Welcome.jsx";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
             <Routes>
               {/* Public Routes */}
               <Route path="/test" element={<ComponentTest />} />
+              <Route path="/welcome" element={<WelcomePage />} />
               {/* Protected Routes */}
               <Route element={<ProtectedRoute />}></Route>
             </Routes>
