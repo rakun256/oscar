@@ -1,9 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import Button from "../../components/Button";
 import logo from "../../assets/app_icon_purple.png";
+import { useAuth } from "../../context/AuthContext";
 
 export default function WelcomePage() {
   const navigate = useNavigate();
+  const { user } = useAuth();
 
   return (
     <div className="flex flex-col items-center justify-around md:justify-center min-h-screen bg-bg text-text animate-fade-in px-6 md:gap-12">
@@ -24,10 +26,16 @@ export default function WelcomePage() {
       <div className="flex flex-col gap-4 w-full max-w-xs">
         <Button
           variant="outline_primary"
-          onClick={() => navigate("/login")}
+          onClick={() => {
+            if (!user) {
+              navigate("/login");
+            } else {
+              navigate("/dashboard");
+            }
+          }}
           className="w-full"
         >
-          Giriş Yap
+          Giriş Yap | Dashboard'a git
         </Button>
 
         <Button
